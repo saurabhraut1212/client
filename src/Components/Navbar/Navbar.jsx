@@ -9,7 +9,7 @@ import "./Navbar.css"
 import { setCurrentUser } from '../../actions/currentUser';
 const Navbar = () => {
     const dispatch=useDispatch();
-    let User=useSelector((state)=>state.currentUserReducer);
+    var User=useSelector((state)=>state.currentUserReducer);
     useEffect(()=>{
      dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
     },[dispatch]);
